@@ -3,9 +3,262 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>git pull git fetch</title>
+    <title>College Admission Form</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>git pull git fetch</h1>
+    <div class="container">
+        <h1>College Admission Form</h1>
+        <p class="subtitle">Please fill out all required fields marked with *</p>
+        
+        <form id="admissionForm" class="admission-form">
+            <!-- Personal Information Section -->
+            <section class="form-section">
+                <h2>Personal Information</h2>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name *</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name *</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="dob">Date of Birth *</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="gender">Gender *</label>
+                    <select id="gender" name="gender" required>
+                        <option value="">Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                        <option value="prefer-not-to-say">Prefer not to say</option>
+                    </select>
+                </div>
+            </section>
+            
+            <!-- Address Section -->
+            <section class="form-section">
+                <h2>Address Information</h2>
+                
+                <div class="form-group">
+                    <label for="street">Street Address *</label>
+                    <input type="text" id="street" name="street" required>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="city">City *</label>
+                        <input type="text" id="city" name="city" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="state">State/Province *</label>
+                        <input type="text" id="state" name="state" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="zip">ZIP/Postal Code *</label>
+                        <input type="text" id="zip" name="zip" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="country">Country *</label>
+                        <input type="text" id="country" name="country" required>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Academic Information Section -->
+            <section class="form-section">
+                <h2>Academic Information</h2>
+                
+                <div class="form-group">
+                    <label for="highSchool">High School Name *</label>
+                    <input type="text" id="highSchool" name="highSchool" required>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="graduationYear">Graduation Year *</label>
+                        <input type="number" id="graduationYear" name="graduationYear" min="1950" max="2030" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="gpa">GPA *</label>
+                        <input type="number" id="gpa" name="gpa" min="0" max="4" step="0.01" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="satScore">SAT Score (Optional)</label>
+                    <input type="number" id="satScore" name="satScore" min="400" max="1600">
+                </div>
+                
+                <div class="form-group">
+                    <label for="actScore">ACT Score (Optional)</label>
+                    <input type="number" id="actScore" name="actScore" min="1" max="36">
+                </div>
+            </section>
+            
+            <!-- Program Selection Section -->
+            <section class="form-section">
+                <h2>Program Selection</h2>
+                
+                <div class="form-group">
+                    <label for="program">Intended Major/Program *</label>
+                    <select id="program" name="program" required>
+                        <option value="">Select a Program</option>
+                        <option value="computer-science">Computer Science</option>
+                        <option value="engineering">Engineering</option>
+                        <option value="business">Business Administration</option>
+                        <option value="medicine">Pre-Medicine</option>
+                        <option value="law">Pre-Law</option>
+                        <option value="arts">Liberal Arts</option>
+                        <option value="science">Natural Sciences</option>
+                        <option value="mathematics">Mathematics</option>
+                        <option value="psychology">Psychology</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="enrollmentTerm">Desired Enrollment Term *</label>
+                    <select id="enrollmentTerm" name="enrollmentTerm" required>
+                        <option value="">Select Term</option>
+                        <option value="fall-2024">Fall 2024</option>
+                        <option value="spring-2025">Spring 2025</option>
+                        <option value="summer-2025">Summer 2025</option>
+                        <option value="fall-2025">Fall 2025</option>
+                    </select>
+                </div>
+            </section>
+            
+            <!-- Additional Information Section -->
+            <section class="form-section">
+                <h2>Additional Information</h2>
+                
+                <div class="form-group">
+                    <label for="extracurricular">Extracurricular Activities</label>
+                    <textarea id="extracurricular" name="extracurricular" rows="4" placeholder="List your extracurricular activities, leadership roles, and achievements..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="essay">Personal Statement/Essay</label>
+                    <textarea id="essay" name="essay" rows="6" placeholder="Tell us about yourself and why you want to attend our college..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>How did you hear about us? *</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="referral" value="website"> College Website</label>
+                        <label><input type="checkbox" name="referral" value="friend"> Friend/Family</label>
+                        <label><input type="checkbox" name="referral" value="counselor"> School Counselor</label>
+                        <label><input type="checkbox" name="referral" value="fair"> College Fair</label>
+                        <label><input type="checkbox" name="referral" value="social"> Social Media</label>
+                        <label><input type="checkbox" name="referral" value="other"> Other</label>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Terms and Conditions -->
+            <section class="form-section">
+                <h2>Terms and Conditions</h2>
+                
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        I certify that all information provided is accurate and complete. I understand that any false information may result in the rejection of my application. *
+                    </label>
+                </div>
+                
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="privacy" name="privacy" required>
+                        I agree to the privacy policy and terms of service. *
+                    </label>
+                </div>
+            </section>
+            
+            <!-- Submit Button -->
+            <div class="form-actions">
+                <button type="reset" class="btn btn-secondary">Clear Form</button>
+                <button type="submit" class="btn btn-primary">Submit Application</button>
+            </div>
+        </form>
+        
+        <div id="successMessage" class="success-message" style="display: none;">
+            <h3>Application Submitted Successfully!</h3>
+            <p>Thank you for your interest in our college. We will review your application and contact you soon.</p>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById('admissionForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Basic form validation
+            const requiredFields = this.querySelectorAll('[required]');
+            let isValid = true;
+            
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    isValid = false;
+                    field.classList.add('error');
+                } else {
+                    field.classList.remove('error');
+                }
+            });
+            
+            // Check if checkboxes are checked
+            const termsCheckbox = document.getElementById('terms');
+            const privacyCheckbox = document.getElementById('privacy');
+            const referralCheckboxes = document.querySelectorAll('input[name="referral"]:checked');
+            
+            if (!termsCheckbox.checked || !privacyCheckbox.checked || referralCheckboxes.length === 0) {
+                isValid = false;
+                if (!termsCheckbox.checked) termsCheckbox.classList.add('error');
+                if (!privacyCheckbox.checked) privacyCheckbox.classList.add('error');
+                if (referralCheckboxes.length === 0) {
+                    document.querySelector('.checkbox-group').classList.add('error');
+                }
+            }
+            
+            if (isValid) {
+                // Hide form and show success message
+                this.style.display = 'none';
+                document.getElementById('successMessage').style.display = 'block';
+                
+                // In a real application, you would submit the form data to a server here
+                console.log('Form submitted successfully!');
+            } else {
+                alert('Please fill in all required fields and accept the terms and conditions.');
+            }
+        });
+        
+        // Remove error class on input
+        document.querySelectorAll('input, select, textarea').forEach(field => {
+            field.addEventListener('input', function() {
+                this.classList.remove('error');
+            });
+        });
+    </script>
+    <script src="script.js"></script>
 </body>
 </html>
